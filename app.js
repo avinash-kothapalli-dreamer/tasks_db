@@ -71,7 +71,7 @@ app.delete('/tasks/delete',async(req,res)=>{
     return res.status(500).json({ status: 'error', message: 'Failed to delete task' });
   }
 })
-const port1 = process.env.PORT1;
-app.listen(5000,()=>{
+const port1 = process.env.PORT || 5000;
+app.listen(port1,()=>{
     console.log("server started");
 })
